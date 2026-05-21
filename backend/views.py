@@ -26,3 +26,7 @@ def contact(request):
         messages.error(request, 'Please fill in all fields before sending.')
 
     return render(request, 'contact.html')
+
+
+def showcase(request):
+    return render(request, 'showcase.html')
