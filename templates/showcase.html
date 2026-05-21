@@ -1,0 +1,73 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Showcase — Tailwind</title>
+    {% tailwind_css %}
+</head>
+<body class="min-h-full bg-slate-950 text-slate-100 antialiased">
+    <div class="relative overflow-hidden">
+        <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-600/20 via-slate-950 to-violet-600/10"></div>
+        <div class="absolute -top-24 right-0 h-72 w-72 rounded-full bg-indigo-500/20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-violet-500/15 blur-3xl"></div>
+
+        <header class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+            <a href="{% url 'home' %}" class="text-lg font-bold tracking-tight text-white hover:text-indigo-300 transition-colors">
+                Backend
+            </a>
+            <nav class="flex gap-2 text-sm font-medium">
+                <a href="{% url 'home' %}" class="rounded-lg px-3 py-2 text-slate-400 hover:bg-white/5 hover:text-white transition">Home</a>
+                <a href="{% url 'showcase' %}" class="rounded-lg bg-indigo-500/20 px-3 py-2 text-indigo-300">Showcase</a>
+                <a href="{% url 'hub:index' %}" class="rounded-lg px-3 py-2 text-slate-400 hover:bg-white/5 hover:text-white transition">Hub</a>
+            </nav>
+        </header>
+
+        <main class="mx-auto max-w-6xl px-6 pb-24 pt-8">
+            <section class="text-center">
+                <span class="inline-flex items-center rounded-full bg-indigo-500/15 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-indigo-300 ring-1 ring-indigo-500/30">
+                    Tailwind CSS
+                </span>
+                <h1 class="mt-6 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                    Built with utility classes
+                </h1>
+                <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-400">
+                    Edit this page or <code class="rounded bg-slate-800 px-1.5 py-0.5 text-sm text-indigo-300">theme/static_src/src/styles.css</code>
+                    — Tailwind rebuilds CSS and the browser reloads automatically.
+                </p>
+                <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+                    <a href="{% url 'contact' %}" class="rounded-xl bg-indigo-500 px-6 py-3 font-semibold text-white shadow-lg shadow-indigo-500/30 hover:bg-indigo-400 transition">
+                        Contact us
+                    </a>
+                    <a href="{% url 'home' %}" class="rounded-xl border border-slate-600 px-6 py-3 font-semibold text-slate-300 hover:border-slate-500 hover:bg-white/5 transition">
+                        Main site
+                    </a>
+                </div>
+            </section>
+
+            <section class="mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 backdrop-blur hover:border-indigo-500/40 transition">
+                    <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/20 text-2xl">⚡</div>
+                    <h2 class="text-lg font-semibold text-white">Hot reload</h2>
+                    <p class="mt-2 text-sm text-slate-400">Run <code class="text-indigo-300">manage.py tailwind start</code> to watch CSS and refresh the browser on save.</p>
+                </article>
+                <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 backdrop-blur hover:border-violet-500/40 transition">
+                    <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/20 text-2xl">🎨</div>
+                    <h2 class="text-lg font-semibold text-white">Utility-first</h2>
+                    <p class="mt-2 text-sm text-slate-400">Compose layouts with Tailwind classes directly in your Django templates.</p>
+                </article>
+                <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 backdrop-blur hover:border-emerald-500/40 transition sm:col-span-2 lg:col-span-1">
+                    <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/20 text-2xl">🔗</div>
+                    <h2 class="text-lg font-semibold text-white">Linked from main app</h2>
+                    <p class="mt-2 text-sm text-slate-400">Reach this page at <span class="font-mono text-emerald-400">/showcase/</span> from the main navigation.</p>
+                </article>
+            </section>
+
+            <section class="mt-16 rounded-2xl border border-dashed border-slate-700 bg-slate-900/40 p-8 text-center">
+                <p class="text-slate-400">Try changing this box — add a class like <span class="font-mono text-pink-400">ring-4 ring-pink-500</span> and save.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

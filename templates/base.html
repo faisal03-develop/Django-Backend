@@ -15,6 +15,7 @@
                 <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
                 <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a></li>
                 <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a></li>
+                <li><a href="{% url 'showcase' %}" class="{% if request.resolver_match.url_name == 'showcase' %}active{% endif %}">Showcase</a></li>
                 <li><a href="{% url 'hub:index' %}" class="{% if request.resolver_match.namespace == 'hub' %}active{% endif %}">Hub</a></li>
             </ul>
         </nav>
