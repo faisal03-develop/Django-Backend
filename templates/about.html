@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}About — Backend{% endblock %}
+
+{% block content %}
+<header class="page-header">
+    <h1>About</h1>
+    <p>Learn what this backend project is for and how it is organized.</p>
+</header>
+
+<section class="content-block">
+    <h2>What is this project?</h2>
+    <p>
+        This is a Django backend server that serves HTML pages and can be extended
+        with REST APIs, authentication, and database models as your needs evolve.
+    </p>
+    <p>
+        The site you are viewing is built with Django templates, static CSS, and
+        simple view functions—no extra frameworks required.
+    </p>
+</section>
+
+<section class="content-block">
+    <h2>Tech stack</h2>
+    <p><strong>Framework:</strong> Django 6</p>
+    <p><strong>Database:</strong> SQLite (default, suitable for development)</p>
+    <p><strong>Frontend:</strong> Server-rendered HTML with a shared base layout</p>
+</section>
+
+<section class="content-block">
+    <h2>Next steps</h2>
+    <p>
+        You can add new apps with <code>python manage.py startapp</code>, wire up API
+        endpoints, or connect a frontend framework. Use the Contact page if you want
+        to reach out with questions or feedback.
+    </p>
+</section>
+{% endblock %}

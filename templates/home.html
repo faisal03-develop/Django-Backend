@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Home — Backend{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <span class="hero-badge">Welcome</span>
+    <h1>Your application backend, ready to grow</h1>
+    <p>
+        A clean Django foundation for building APIs, dashboards, and web experiences.
+        Start here and explore what this project can do.
+    </p>
+    <div class="btn-group">
+        <a href="{% url 'about' %}" class="btn">Learn more</a>
+        <a href="{% url 'hub:index' %}" class="btn btn-outline">Visit Hub app</a>
+        <a href="{% url 'contact' %}" class="btn btn-outline">Get in touch</a>
+    </div>
+</section>
+
+<section class="features">
+    <article class="card">
+        <h3>Fast setup</h3>
+        <p>Django handles routing, templates, and admin so you can focus on features.</p>
+    </article>
+    <article class="card">
+        <h3>Structured pages</h3>
+        <p>Home, About, and Contact share one layout and stay easy to extend.</p>
+    </article>
+    <article class="card">
+        <h3>Ready to extend</h3>
+        <p>Add apps, APIs, and databases as your project grows.</p>
+    </article>
+</section>
+{% endblock %}
