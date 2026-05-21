@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Hub — Backend{% endblock %}
+
+{% block content %}
+<section class="hub-page">
+    <div class="hub-hero">
+        <span class="hub-badge">Hub App</span>
+        <h1>A dedicated space in your Django project</h1>
+        <p>
+            This page lives in the <strong>hub</strong> app—separate from the main site views,
+            with its own URLs and templates, linked from the navigation above.
+        </p>
+        <a href="{% url 'home' %}" class="btn btn-outline">← Back to main site</a>
+    </div>
+
+    <div class="hub-stats">
+        <div class="hub-stat">
+            <span class="hub-stat-value">hub</span>
+            <span class="hub-stat-label">App name</span>
+        </div>
+        <div class="hub-stat">
+            <span class="hub-stat-value">/hub/</span>
+            <span class="hub-stat-label">URL prefix</span>
+        </div>
+        <div class="hub-stat">
+            <span class="hub-stat-value">1</span>
+            <span class="hub-stat-label">Page (for now)</span>
+        </div>
+    </div>
+
+    <section class="hub-panel">
+        <h2>What you can build here</h2>
+        <ul class="hub-list">
+            <li>Product listings, dashboards, or member areas</li>
+            <li>API-backed widgets with models in <code>hub/models.py</code></li>
+            <li>Extra routes under <code>/hub/…</code> via <code>hub/urls.py</code></li>
+        </ul>
+    </section>
+</section>
+{% endblock %}
